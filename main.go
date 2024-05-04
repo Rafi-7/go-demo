@@ -61,7 +61,16 @@ func main() {
 		Released:      "2018",
 	}
 
-	songList := []interface{}{song1, song2, song3, song4, song5}
+	song6 := Songs{
+		Name:          "Thanjavooru Mannu Eduthu",
+		Starring:      "Murali",
+		Singer:        "Deva and Krishnaraj",
+		MusicDirector: "Deva",
+		Duration:      "05.34",
+		Released:      "1997",
+	}
+
+	songList := []interface{}{song1, song2, song3, song4, song5, songs6}
 	name, _ := songsCollection.InsertMany(context.Background(), songList)
 	fmt.Println(name)
 
